@@ -1,8 +1,6 @@
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
-vim.cmd('autocmd!')
-
 -- encoding
 vim.scriptencoding = 'utf-8'
 vim.o.encoding = 'utf-8'
