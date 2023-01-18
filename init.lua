@@ -49,18 +49,10 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme gruvbox]]
+vim.cmd [[colorscheme onedark]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
-
--- Keymaps for better default experience
--- See `:help vim.keymap.set()`
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
--- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -72,6 +64,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
+
+-- Keymaps
+require('keymaps')
 
 -- Enable Comment.nvim
 require('Comment').setup()
