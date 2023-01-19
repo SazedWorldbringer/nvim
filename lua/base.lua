@@ -9,6 +9,7 @@ vim.o.fileencoding = 'utf-8'
 -- better ui
 vim.o.title = true
 vim.o.laststatus = 2
+vim.o.wrap = false
 
 -- shell
 vim.o.shellcmdflag = "-c"
