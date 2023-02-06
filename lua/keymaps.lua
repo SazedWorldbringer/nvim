@@ -36,6 +36,9 @@ keymap.set("v", "<leader>d", "\"_d")
 -- replace the word you're on over the whole buffer
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- write 
+keymap.set("n", "<leader>fo", "<cmd>lua vim.lsp.buf.format()<cr>")
+
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
