@@ -1,4 +1,4 @@
 return {
-  {'navarasu/onedark.nvim'},
-  {'ellisonleao/gruvbox.nvim'}
+    { 'navarasu/onedark.nvim' },
+    { 'ellisonleao/gruvbox.nvim' },
 }
