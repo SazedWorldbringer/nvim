@@ -5,7 +5,7 @@ local keymap = vim.keymap
 keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 keymap.set("n", "Q", "<nop>")
 
--- escape normal mode with `jk`
+-- escape insert mode with `jk`
 keymap.set("i", "jk", "<esc>")
 
 -- move code blocks inside code blocks
