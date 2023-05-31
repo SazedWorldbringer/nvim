@@ -71,10 +71,4 @@ return { -- Highlight, edit, and navigate code
       }
     end
   },
-  {
-    'nvim-treesitter/nvim-treesitter-context',
-    opts = function()
-      require('treesitter-context').setup {}
-    end
-  }
 }
