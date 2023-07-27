@@ -23,8 +23,8 @@ vim.o.hlsearch = false
 vim.wo.number = true
 vim.wo.relativenumber = true
 
--- Enable mouse mode
-vim.o.mouse = 'a'
+-- Disable mouse mode
+vim.cmd [[set mouse=]]
 
 -- indenting
 vim.o.autoindent = true
@@ -47,7 +47,6 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme onedark]]
 function ColorMyPencils(color)
   color = color or 'onedark'
   vim.cmd.colorscheme(color)
@@ -56,6 +55,8 @@ function ColorMyPencils(color)
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
+ColorMyPencils('habamax')
+
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
@@ -63,9 +64,9 @@ vim.o.completeopt = 'menuone,noselect'
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
-    callback = function()
-      vim.highlight.on_yank()
-    end,
-    group = highlight_group,
-    pattern = '*',
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
 })
