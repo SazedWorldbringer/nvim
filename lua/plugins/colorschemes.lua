@@ -1,4 +1,5 @@
 return {
-    { 'navarasu/onedark.nvim' },
-    { 'ellisonleao/gruvbox.nvim' },
+    { 'navarasu/onedark.nvim', priority = 1000 },
+    { "ellisonleao/gruvbox.nvim", priority = 1000 },
+    { "shaunsingh/nord.nvim",     priority = 1000 },
 }
