@@ -47,6 +47,9 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
+vim.cmd [[colorscheme nord]]
+
+-- makes nvim transparent
 function ColorMyPencils(color)
   color = color or 'onedark'
   vim.cmd.colorscheme(color)
@@ -54,8 +57,7 @@ function ColorMyPencils(color)
   vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
-
-ColorMyPencils('habamax')
+-- ColorMyPencils('nord')
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
