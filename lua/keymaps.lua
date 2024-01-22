@@ -49,8 +49,8 @@ keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
 -- keymap.set('n', 'te', ':tabedit')
 
 -- Travel between tabs
-keymap.set('n', '<Tab>', ':tabnext<Return>')
-keymap.set('n', '<S-Tab>', ':tabprev<Return>')
+keymap.set('n', 'tn', ':tabnext<Return>')
+keymap.set('n', 'tp', ':tabprev<Return>')
 
 -- Split window
 keymap.set('n', '<leader>ss', ':split<Return><C-w>w', { silent = true })
