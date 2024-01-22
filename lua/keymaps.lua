@@ -78,3 +78,6 @@ keymap.set('n', '-', '<C-x>')
 -- Remap for dealing with word wrap
 keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
+-- Copilot
+keymap.set("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
